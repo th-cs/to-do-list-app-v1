@@ -6,8 +6,8 @@ export default function TaskCard({ item, onDelete, onEdit }) {
 
 	return(
 		<View style={ [ styles.card, {
-				borderLeftColor: priorityColor
-			}] }>
+			borderLeftColor: priorityColor
+		}] }>
 			<View style={ { flex: 1 } }>
 				<Text style={ styles.title }>
 					{ item.title }
