@@ -1,6 +1,5 @@
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import { theme } from "../../styles/global";
-import TaskCardStyle from "./style";
 
 export default function TaskCard({ item, onDelete, onEdit }) {
 	const priorityColor = theme.colors.priority[ item.priority ] || theme.colors.textSub;
@@ -9,7 +8,7 @@ export default function TaskCard({ item, onDelete, onEdit }) {
 		<View style={ [ styles.card, {
 				borderLeftColor: priorityColor
 			}] }>
-			<View style={{ flex: 1 }}>
+			<View style={ { flex: 1 } }>
 				<Text style={ styles.title }>
 					{ item.title }
 				</Text>
@@ -25,6 +24,7 @@ export default function TaskCard({ item, onDelete, onEdit }) {
 					{ item.start } - { item.end }
 				</Text>
 			</View>
+
 			<View style={ styles.action }>
 				<TouchableOpacity onPress = { onEdit }>
 					<Text style={ styles.icon }>
