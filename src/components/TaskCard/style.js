@@ -39,7 +39,7 @@ export const styles = StyleSheet.create({
 		marginLeft: 10
 	},
 	icons: {
-
+		fontSize: 22
 	}
 
 });
