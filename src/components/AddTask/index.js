@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Modal, View, Text, TextInput, TouchableOpacity } from "react-native";
-import styles from "./style.js";
+import { styles } from "./style.js";
 
 export default function AddTask({ visible, onSave, onClose }){
 	const [task, setTask] = useState({
