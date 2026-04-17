@@ -44,19 +44,19 @@ export default function AddTask({ visible, onSave, onClose }){
 					})} />
 				<TextInput
 					style={styles.input}
-					placeholder="Data de início: DD/MM"
+					placeholder="Data de início: DD / MM"
 					onChangeText={t => setTask({
 						...task, startDate: t
 					})} />
 				<TextInput
 					style={styles.input}
-					placeholder="Data de conclusão: DD/MM"
+					placeholder="Data de conclusão: DD / MM"
 					onChangeText={t => setTask({
 						...task, endDate: t
 					})} />
 				<TextInput
 					style={styles.priority}
-					placeholder="Prioridade: Alta/Média/Baixa"
+					placeholder="Prioridade: Alta / Média / Baixa"
 					onChangeText={t => setTask({
 						...task, priority: t
 					})} />
