@@ -9,19 +9,19 @@ import TaskCard from "./src/components/TaskCard";
 export default function App() {
 	const [task, setTask] = useState([]);
 	const [searchText, setSearchText] = useState("");
-	const [addVisible, setAddVisibile] = useState(false);
+	const [addVisible, setAddVisible] = useState(false);
 	const [editVisible, setEditVisible] = useState(false);
 	const [selectedTask, setSelectedTask] = useState(null);
 
 	const addTask = (newTask) => {
 		setTask([...task, {newTask, id: Date.now().toString() }]);
-		setAddVisibile(false);
+		setAddVisible(false);
 	}
 
 	const updateTask = (updatedTask) => {
 		setTask(task.map(
 			t => t.id === updatedTask.id ? updatedTask: t));
-		setAddVisibile(false);
+		setAddVisible(false);
 	}
 
 	const deleteTask = (id) => setTask(task.filter(t => t.id !== id));
@@ -48,13 +48,13 @@ export default function App() {
 
 			<TouchableOpacity
 				style={styles.button}
-				onPress={() => setAddVisibile(true)}>
+				onPress={() => setAddVisible(true)}>
 				<Text style={styles.add}>+</Text>
 			</TouchableOpacity>
 			<AddTask
 				visible={addVisible}
 				onSave={addTask}
-				onClose={() => setAddVisibile(false)} />
+				onClose={() => setAddVisible(false)} />
 			<EditTask
 				visible={editVisible}
 				taskData={selectedTask}
