@@ -26,6 +26,10 @@ export default function App() {
 
 	const deleteTask = (id) => setTask(task.filter(t => t.id !== id));
 
+	const openEdit = (task) => {
+		setSelectedTask(task);
+		setEditVisible(true);
+	};
 
 	const filterTask = task.filter(
 		t => t.title.toLowerCase().includes(searchText.toLowerCase()));
