@@ -49,7 +49,7 @@ export default function App() {
 			<TouchableOpacity
 				style={styles.button}
 				onPress={() => setAddVisible(true)}>
-				<Text style={styles.add}>+</Text>
+				<Text style={styles.buttonText}>Adicionar Tarefa</Text>
 			</TouchableOpacity>
 			<AddTask
 				visible={addVisible}
@@ -80,11 +80,15 @@ const styles = StyleSheet.create({
 		position: "absolute",
 		bottom: 30,
 		right: 30,
-		backgroundColor: theme.colors.background,
-		width: 60,
+		backgroundColor: theme.colors.primary,
+		width: 160,
 		height: 60,
 		borderRadius: 30,
 		justifyContent: "center",
 		alignItems: "center"
+	},
+	buttonText: {
+		color: "#FFFFFF",
+		fontSize: 16
 	}
 });
