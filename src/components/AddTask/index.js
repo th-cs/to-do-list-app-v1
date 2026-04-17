@@ -75,7 +75,7 @@ export default function AddTask({ visible, onSave, onClose }){
 						Cancelar
 					</Text>
 				</TouchableOpacity>
-0
+
 			</View>
 		</Modal>
 	);
