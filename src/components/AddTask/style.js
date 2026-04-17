@@ -6,6 +6,7 @@ export const styles = StyleSheet.create({
 	modal: {
 		flex: 1,
 		padding: 30,
+		gap: 10,
 		backgroundColor: theme.colors.background
 	},
 	title: {
